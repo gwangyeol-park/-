@@ -18,7 +18,6 @@ void loop() {
           digitalWrite(PIN_LED, 1);
           delay(100);
           i += 1;
-          Serial.println("+1");
         }  
       else
         {
