@@ -2,7 +2,6 @@
 
 // Arduino pin assignment
 #define PIN_IR A0
-#define PIN_LED 9
 #define PIN_SERVO 10
 
 float duty_NEU = 1550;
@@ -11,9 +10,6 @@ float duty_LOW = 1950;
 
 Servo myservo;
 void setup() {
-  // initialize GPIO pins
-  //pinMode(PIN_LED, OUTPUT);
-  //digitalWrite(PIN_LED, 1);
   myservo.attach(PIN_SERVO); 
   myservo.writeMicroseconds(duty_NEU);
   
