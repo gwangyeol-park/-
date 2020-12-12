@@ -54,7 +54,7 @@
 Servo myservo; // [3070] 서보 객체 생성
 
 // Distance sensor
-float dist_target; // [1234] location to send the ball
+float dist_target =  _DIST_TARGET;// [1234] location to send the ball
 float dist_raw, dist_ema; // [3070] 거리와 노이즈 필터 적용 후 거리를 저장하기 위한 변수
 float ema_dist=0;            // EMA 필터에 사용할 변수
 float filtered_dist;       // 최종 측정된 거리값을 넣을 변수. loop()안에 filtered_dist = filtered_ir_distance(); 형태로 사용하면 됨.
@@ -208,7 +208,7 @@ void loop() {
    Serial.print("IR:");
    Serial.print(dist_raw);
    Serial.print(",T:");
-   Serial.print(_DIST_TARGET);
+   Serial.print(dist_target);
    Serial.print(",P:");
    Serial.print(map(pterm,-1000,1000,510,610));
    Serial.print(",D:");
